@@ -77,6 +77,9 @@ def menu():
     print("Enter '1' to view balance.")
     print("Enter '2' to add Dabloons.")
     print("Enter '3' to minus Dabloons.")
+    print("Enter '4' to add existing assets to list.")
+    print("Enter '5' to view purchased assets.")
+    print("Enter 'laws' to view the laws with transactions.")
     print("Enter 'cancel' to cancel account.")
     
     print("")
@@ -131,6 +134,54 @@ def menu():
         time.sleep(0.5)
         print(".")
         minus()
+    elif choicemenu == '4':
+        time.sleep(0.5)
+        print(".")
+        time.sleep(0.5)
+        print(".")
+        time.sleep(0.5)
+        print(".")
+        time.sleep(0.5)
+        print(".")
+        time.sleep(0.5)
+        print(".")
+        time.sleep(0.5)
+        print(".")
+        time.sleep(0.5)
+        print(".")
+        addassets()
+    elif choicemenu == '5':
+        time.sleep(0.5)
+        print(".")
+        time.sleep(0.5)
+        print(".")
+        time.sleep(0.5)
+        print(".")
+        time.sleep(0.5)
+        print(".")
+        time.sleep(0.5)
+        print(".")
+        time.sleep(0.5)
+        print(".")
+        time.sleep(0.5)
+        print(".")
+        viewassets()
+    elif choicemenu == 'laws':
+        time.sleep(0.5)
+        print(".")
+        time.sleep(0.5)
+        print(".")
+        time.sleep(0.5)
+        print(".")
+        time.sleep(0.5)
+        print(".")
+        time.sleep(0.5)
+        print(".")
+        time.sleep(0.5)
+        print(".")
+        time.sleep(0.5)
+        print(".")
+        laws()
     elif choicemenu == 'cancel':
         time.sleep(0.5)
         print(".")
@@ -309,8 +360,6 @@ def minus():
         
         itemaddacc=input("Please state the name of the purchase: ")
         
-        items.append(itemaddacc)
-        
         moneyminus=input("How much does this purchase cost? ")
         
         if int(moneyminus) > int(balance):
@@ -353,6 +402,8 @@ def minus():
             
             balance = int(balance) - int(moneyminus)
             
+            items.append(itemaddacc)
+            
             print("Transaction complete!")
             
             print("")
@@ -369,8 +420,62 @@ def minus():
         print("")
         minus()
         
+def addassets():
+    
+    listitemadd=input("Please state the name of your asset: (ONE AT A TIME) ")
+    
+    items.append(listitemadd)
+    
+    time.sleep(0.5)
+    print(".")
+    time.sleep(0.5)
+    print(".")
+    time.sleep(0.5)
+    print(".")
+    time.sleep(0.5)
+    print(".")
+    time.sleep(0.5)
+    print(".")
+    time.sleep(0.5)
+    print(".")
+    time.sleep(0.5)
+    print(".")
+    time.sleep(1)
+    
+    print("Done!")
+    
+    time.sleep(1)
+    
+    main()
+    
+def viewassets():
+    
+    print("The current assets registered are listed below:")
+    
+    time.sleep(2)
+    
+    print(items)
+    
+    time.sleep(2)
+    
+    main()
+    
+def laws():
+
+    print("The current laws are listed below:")
+    
+    print("")
+    
+    print("NO MORE than 100 dabloons per withdraw.")
+    print("Do NOT add fake money into account. Always verify it first.")
+    print("Do NOT use a fake name.")
+    
+    time.sleep(4)
+    
+    main()
+        
 print("Welcome to Dabloon Bank.")
-print("Open an account with us!")
+print("Open an account with us below!")
 print("")
 
 openacc()
